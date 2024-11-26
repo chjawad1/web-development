@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Message Multiple Times</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin-bottom: 10px;
+            display: block;
+        }
+        #output {
+            margin-top: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Message Display</h1>
+    
+    <label for="timesInput">Enter the number of times to display the message:</label>
+    <input type="number" id="timesInput" placeholder="Enter a number" min="1">
+
+    <label for="messageInput">Enter the message you want to display:</label>
+    <input type="text" id="messageInput" placeholder="Enter your message">
+
+    <button onclick="displayMessage()">Display Message</button>
+    
+    <div id="output"></div>
+
+    <script>
+        function displayMessage() {
+            const timesInput = document.getElementById('timesInput').value;
+            const message = document.getElementById('messageInput').value.trim();
+            const outputElement = document.getElementById('output');
+
+            // Clear previous output
+            outputElement.innerHTML = '';
+
+            let times = parseInt(timesInput);
+
+            if (!isNaN(times) && times > 0 && message) {
+                for (let i = 0; i < times; i++) {
+                    // Append the message to the output div
+                    const messageParagraph = document.createElement('p');
+                    messageParagraph.textContent = message;
+                    outputElement.appendChild(messageParagraph);
+                }
+            } else {
+                outputElement.textContent = "Please enter a valid number greater than 0 and a message.";
+                outputElement.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>

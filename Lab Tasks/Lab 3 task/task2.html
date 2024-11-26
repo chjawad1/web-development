@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+        .form-container {
+            background-color: black;
+            width: 500px;
+            margin: 50px auto;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .facebook-button {
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 48%;
+            
+            border-radius: 5px;
+        }
+        .twitter-button {
+            background-color: rgb(36, 100, 219);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 48%;
+           
+            border-radius: 5px;
+        }
+        .form-table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .form-table input[type="text"], 
+        .form-table input[type="email"], 
+        .form-table input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-table input[type="text"]:nth-child(1) {
+            background-color: lightgreen;
+        }
+        .form-table input[type="text"],
+        .form-table input[type="email"],
+        .form-table input[type="password"] {
+            background-color: white;
+        }
+        .create-account-btn {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .terms {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .terms a {
+            color: #ccc;
+        }
+       
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="social-buttons">
+            <a href="https://www.facebook.com" target="_blank" class="facebook-button">Connect with Facebook</a>
+            <a href="https://www.twitter.com" target="_blank" class="twitter-button">Connect with Twitter</a>
+        </div>
+        <form action="#" method="post">
+            <table class="form-table">
+                <tr>
+                    <td><input type="text" name="first_name" placeholder="First Name"></td>
+                    <td><input type="text" name="last_name" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="email" name="email" placeholder="yourEmail.com"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="password" name="password" placeholder="Password"></td>
+                </tr>
+            </table>
+            <div class="terms">
+                By creating an account, you agree to our <a href="#">Terms & Conditions</a>.
+            </div>
+            <button type="submit" class="create-account-btn">Create Account</button>
+        </form>
+        <div class="template-credit">
+            Template by w3layouts
+        </div>
+    </div>
+</body>
+</html>

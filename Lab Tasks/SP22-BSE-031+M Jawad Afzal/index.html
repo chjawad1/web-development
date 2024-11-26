@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <style>
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Flexbox to center the content */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .search-container {
+            text-align: center;
+        }
+
+        img {
+            margin-bottom: 20px;
+            width: 272px; /* Same as Google's logo width */
+            height: auto;
+        }
+
+        input[type="text"] {
+            width: 400px;
+            padding: 10px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="submit"], input[type="button"] {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, input[type="button"]:hover {
+            background-color: #357ae8;
+        }
+
+        .nav-links {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .nav-links a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #4285f4;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-links">
+        <a href="img_search.html">Image Search</a>
+        <a href="adv_search.html">Advanced Search</a>
+    </div>
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    <div class="search-container">
+        <form action="https://google.com/search" method="GET">
+            
+            <!-- Search Input -->
+            <input type="text" name="q" placeholder="Search Google...">
+            <br>
+
+            <!-- Buttons -->
+            <input type="submit" value="Google Search">
+            <input type="button" value="I'm Feeling Lucky" 
+                   onclick="window.location.href='https://www.google.com/search?btnI=I&q=' + encodeURIComponent(document.querySelector('input[name=q]').value)">
+        </form>
+    </div>
+</body>
+</html>

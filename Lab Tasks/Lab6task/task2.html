@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #questionBox, #answerBox {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Answer the Question</h1>
+    <p id="questionBox"></p>
+    <input type="text" id="answerInput" placeholder="Enter your answer here">
+    <button onclick="submitAnswer()">Submit Answer</button>
+    
+    <p id="result"></p>
+
+    <script>
+        const question = "What is the capital of France?";
+        const correctAnswer = "paris";
+
+        // Display the question
+        document.getElementById('questionBox').textContent = question;
+
+        function submitAnswer() {
+            const userAnswer = document.getElementById('answerInput').value.trim().toLowerCase();
+            const resultElement = document.getElementById('result');
+
+            if (userAnswer === correctAnswer) {
+                resultElement.textContent = "Success! Your answer is correct.";
+                resultElement.style.color = "green";
+            } else {
+                resultElement.textContent = "Error! The correct answer is: " + correctAnswer;
+                resultElement.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>

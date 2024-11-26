@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Enter Numbers to Sum</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="addNumber()">Add Number</button>
+    <button onclick="endInput()">End</button>
+
+    <p id="result"></p>
+
+    <script>
+        let sum = 0;
+
+        function addNumber() {
+            const inputElement = document.getElementById('numberInput');
+            const number = parseFloat(inputElement.value);
+
+            if (isNaN(number)) {
+                alert("Please enter a valid number.");
+            } else if (number === 0) {
+                endInput();
+            } else {
+                sum += number;
+                inputElement.value = ''; // Clear input field
+                inputElement.focus(); // Focus back to the input
+            }
+        }
+
+        function endInput() {
+            document.getElementById('result').textContent = "The sum of all entered numbers is: " + sum;
+        }
+    </script>
+
+</body>
+</html>

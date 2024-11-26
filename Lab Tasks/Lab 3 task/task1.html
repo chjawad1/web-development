@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non Faculty Job Application Form - COMSATS Institute of Information Technology</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .header img {
+            height: 100px;
+        }
+        .photo-box {
+            border: 1px solid #000;
+            width: 100px;
+            height: 130px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .photo-box label {
+            font-size: 12px;
+            text-align: center;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 100%;
+            padding: 5px;
+        }
+        table {
+            width: 100%;
+        }
+        .form-table td {
+            padding: 10px 0;
+        }
+        .checkbox-group input {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header section with title and logo -->
+        <div class="header">
+            <img src="comsats-logo.png" alt="COMSATS Logo">
+            <div>
+                <h1>Non Faculty Job Application Form</h1>
+                <h2>COMSATS Institute of Information Technology</h2>
+            </div>
+            <div class="photo-box">
+                <label>Affix a recent<br>photograph<br>3cm x 5cm</label>
+            </div>
+        </div>
+
+        <form action="#" method="POST">
+            <!-- Post Applied For -->
+            <div class="form-section">
+                <label for="post">1. Post Applied for (mention only one position):</label><br>
+                <input type="text" id="post" name="post_applied" required>
+            </div>
+
+            <!-- Department -->
+            <div class="form-section">
+                <label for="department">2. Department (mention department if required):</label><br>
+                <input type="text" id="department" name="department">
+            </div>
+
+            <!-- Campus -->
+            <div class="form-section">
+                <label>3. Campus (Please tick any one choice):</label><br>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="campus_sahiwal" name="campus" value="Sahiwal">
+                    <label for="campus_sahiwal">Sahiwal</label>
+                    <input type="checkbox" id="campus_attock" name="campus" value="Attock">
+                    <label for="campus_attock">Attock</label>
+                </div>
+            </div>
+
+            <!-- Name -->
+            <div class="form-section">
+                <label for="name">4. Name in full (Use CAPITAL LETTERS):</label><br>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Father Name -->
+            <div class="form-section">
+                <label for="father_name">5. Father Name (Use CAPITAL LETTERS):</label><br>
+                <input type="text" id="father_name" name="father_name" required>
+            </div>
+
+            <!-- Additional sections can be added below -->
+
+            <!-- Submit Button -->
+            <div class="form-section">
+                <button type="submit">Submit Application</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

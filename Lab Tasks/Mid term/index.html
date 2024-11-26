@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E- commerce </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <header>Ali's Book store</header>
+    <nav>
+        <a href="#home">Home</a> | 
+        <a href="#Books">About</a> | 
+        <a href="Cart"> Cart</a> | 
+        <a href="#contact">Contact</a>
+    </nav>
+    <input class="search" type="text" placeholder="search for books">
+    <section class="books">
+       <div class="main-content">
+        <div class="book-grid">
+         <div class="book-item">
+            <img src="deer.jpg" alt="Book Cover">
+            <h2>Book 1</h1>
+              <p>Title: book1</p>
+              <p>$19.99</p>
+              <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+              <p class="confirmation-message"></p>
+            </div>
+        </div>
+        <div class="book-item">
+            <img src="deer.jpg" alt="Book Cover">
+            <h2>Book 1</h1>
+              <p>Title: book1</p>
+              <p>$19.99</p>
+              <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+              <p class="confirmation-message"></p>
+
+        </div>
+        <div class="book-item">
+            <img src="deer.jpg" alt="Book Cover">
+            <h2>Book 1</h1>
+              <p>Title: book1</p>
+              <p>$19.99</p>
+              <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+              <p class="confirmation-message"></p>
+
+        </div>
+        <div class="book-item">
+            <img src="deer.jpg" alt="Book Cover">
+            <h2>Book 1</h1>
+              <p>Title: book1</p>
+              <p>$19.99</p>
+              <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+              <p class="confirmation-message"></p>
+
+        </div>
+        <div class="book-item">
+            <img src="deer.jpg" alt="Book Cover">
+            <h2>Book 1</h1>
+              <p>Title: book1</p>
+              <p>$19.99</p>
+              <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+              <p class="confirmation-message"></p>
+
+        </div>
+        <div class="book-item">
+            <img src="deer.jpg" alt="Book Cover">
+            <h2>Book 1</h1>
+              <p>Title: book1</p>
+              <p>$19.99</p>
+              <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+              <p class="confirmation-message"></p>
+
+        </div>
+    </div>
+    </section>
+    <footer>
+        <a href="#Facebook">Facebook</a> |
+        <a href="#instagram">Instagram</a> |
+        <a href="#twitter">twitter</a>
+        <p>this site is for buying a books its copyrigth 2024</p> 
+
+    </footer>
+    <script>
+        // Add to Cart functionality
+        function addToCart(button) {
+          const confirmationMessage = button.nextElementSibling;
+          confirmationMessage.textContent = 'Added to cart!';
+          setTimeout(() => {
+            confirmationMessage.textContent = '';
+          }, 2000);
+        }
+    
+        // Search validation
+        function validateSearch() {
+          const searchBar = document.getElementById('search-bar');
+          if (searchBar.value.trim() === '') {
+            alert('Please enter a search term');
+          } else {
+            alert('Searching for: ' + searchBar.value);
+          }
+        }
+      </script>
+</body>
+</html>

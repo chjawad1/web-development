@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+table.contact-form {
+    width: 60%;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+}
+
+.left-section {
+    width: 50%;
+    background-color: #6EC1E4;
+    padding: 20px;
+    color: white;
+}
+
+.right-section {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0275d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button.btn:hover {
+    background-color: #0256a3;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 10px;
+}
+
+.inputs input, .inputs select, .inputs textarea {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.inputs .icon {
+    width: 30px;
+    vertical-align: middle;
+    margin-left: -35px;
+}

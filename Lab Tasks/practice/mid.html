@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Bookstore</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    header, footer {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    header nav a, footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .main-content {
+      padding: 20px;
+    }
+    .book-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .book-item {
+      flex: 1 1 calc(33.33% - 20px);
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .book-item img {
+      width: 100%;
+      max-width: 150px;
+      transition: transform 0.2s;
+    }
+    .book-item:hover img {
+      transform: scale(1.1);
+    }
+    .add-to-cart {
+      background-color: #007bff;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .confirmation-message {
+      color: green;
+      margin-top: 5px;
+      font-size: 0.9em;
+    }
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .book-item {
+        flex: 1 1 calc(50% - 20px);
+      }
+    }
+    @media (max-width: 480px) {
+      .book-item {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Fictional Bookstore</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Books</a>
+      <a href="#">Cart</a>
+      <a href="#">Contact Us</a>
+    </nav>
+    <input type="text" id="search-bar" placeholder="Search for books...">
+    <button onclick="validateSearch()">Search</button>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="book-grid">
+      <!-- Book Item Template -->
+      <div class="book-item">
+        <img src="deer.jpg" alt="Book Cover">
+        <h2>Book Title 1</h2>
+        <p>Author Name 1</p>
+        <p>$19.99</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <p class="confirmation-message"></p>
+      </div>
+      <!-- Repeat similar divs for six books -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Follow us on:
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">Instagram</a>
+    </p>
+    <p>&copy; 2023 Fictional Bookstore - Your one-stop shop for books online.</p>
+  </footer>
+
+  <script>
+    // Add to Cart functionality
+    function addToCart(button) {
+      const confirmationMessage = button.nextElementSibling;
+      confirmationMessage.textContent = 'Added to cart!';
+      setTimeout(() => {
+        confirmationMessage.textContent = '';
+      }, 2000);
+    }
+
+    // Search validation
+    function validateSearch() {
+      const searchBar = document.getElementById('search-bar');
+      if (searchBar.value.trim() === '') {
+        alert('Please enter a search term');
+      } else {
+        alert('Searching for: ' + searchBar.value);
+      }
+    }
+  </script>
+</body>
+</html>

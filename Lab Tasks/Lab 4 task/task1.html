@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Section -->
+        <table class="login">
+            <tr>
+                <td colspan="2" class="header"><h3>Member Login</h3></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="username-login" placeholder="User Name"></td>
+                <td><img src="tickimage.jpg" alt="Correct" class="status-icon"></td>
+            </tr>
+            <tr>
+                <td><input type="password" id="password-login" placeholder="Password"></td>
+                <td><img src="crossimage.jpg" alt="Incorrect" class="status-icon"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="forgot-password"><a href="#">Forgot password?</a></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="btn">Login</button></td>
+            </tr>
+        </table>
+        
+        <!-- Sign Up Section -->
+        <table class="signup">
+            <tr>
+                <td colspan="4" class="header"><h3>Sign Up - It's free.</h3></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="username-signup" placeholder="User Name"></td>
+                <td><img src="tickimage.jpg" alt="Correct" class="status-icon"></td>
+                <td><input type="password" id="password-signup" placeholder="Password"></td>
+                <td><img src="crossimage.jpg" alt="Incorrect" class="status-icon"></td>
+            </tr>
+            <tr>
+                <td><input type="email" id="email-signup" placeholder="Email"></td>
+                <td colspan="3"><input type="email" id="reconfirm-email-signup" placeholder="Re-confirm email"></td>
+            </tr>
+            <tr>
+                <td colspan="4"><h4>Personal Details</h4></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="firstname" placeholder="First Name"></td>
+                <td><input type="text" id="lastname" placeholder="Last Name"></td>
+            </tr>
+            <tr>
+                <td><input type="email" id="personal-email" placeholder="Your Email"></td>
+                <td><input type="email" id="reconfirm-personal-email" placeholder="Re-enter Email"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="city" placeholder="City"></td>
+                <td><input type="text" id="province" placeholder="Province"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="address1" placeholder="Address 1"></td>
+                <td><input type="text" id="address2" placeholder="Address 2"></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td colspan="3">
+                    <select id="country">
+                        <option value="usa">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="Pakistan">Pakistan</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><button class="btn">Sign Up</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

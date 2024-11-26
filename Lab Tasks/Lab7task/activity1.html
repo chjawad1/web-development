@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <p>Click the button to wait 3 seconds, then msg is displayed. </p>
+    <p id="demo"></p>
+    <button onclick="myfunction()"> Try it</button>
+    <script>
+        var myvar;
+        function myfunction(){
+            myvar = setTimeout(MsgFunc,3000);
+        }
+        function MsgFunc(){
+            document.getElementById("demo").innerHTML="This text is displayed after three seconds";
+        }
+    </script>
+
+    </html>
